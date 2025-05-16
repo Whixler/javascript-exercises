@@ -2,14 +2,15 @@ const removeFromArray = function(arr, ...value) {
     let myArray = arr;
     let myValue = value;
 
-    while (true) {    
-        let index = myArray.indexOf(myValue[0]);
-        if(index >= 0) { 
+    for(let i = 0; i < value.length; i++) {
+        console.log({i});
+        while (true) {    
+            let index = myArray.indexOf(myValue[i]);
+            if(index == -1) {break;}
             myArray.splice(index, 1);
-        } else { break; }
-        
-    console.log({index})
-    console.log({myArray});
+        console.log({index});
+        console.log({myArray});
+        }
     }
     return myArray;
 };
