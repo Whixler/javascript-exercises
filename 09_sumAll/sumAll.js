@@ -5,16 +5,14 @@ const sumAll = function(numStart, numEnd) {
         numStart = numEnd;
         numEnd = b;
     } 
-console.log({numStart})
-console.log({numEnd})
 
-    if(numStart > 0 && numEnd > 0) {
+    if(numStart > 0 && numEnd > 0 && Number.isInteger(numStart) && Number.isInteger(numEnd)) {
            for(let i = numStart; i <= numEnd; i++) {
                 total = i + total;
-                // console.log({i}) 
            }
-            // console.log({total})
-        }          
+        }   else {
+            total = "ERROR"
+        }       
         return total;
 };
 
