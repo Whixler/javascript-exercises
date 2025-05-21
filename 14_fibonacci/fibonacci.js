@@ -3,9 +3,12 @@ const fibonacci = function(num) {
     let num2 = 1;
     let sum;
 
-    if(num === 0){
+
+    if(num < 0) {
+        return "OOPS"
+    } else if(num == 0){
         return num1;
-    } else if (num === 1) {
+    } else if (num == 1) {
         return num2;
     } else if (num > 1) {
         for(let i = 2; i <= num; i++) {
